@@ -19,6 +19,15 @@
             padding: 30px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
+        /* LOGO STYLING */
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px; 
+        }
+        .ds-logo {
+            max-width: 200px; /* Juster denne værdi efter behov */
+            height: auto;
+        }
         h1 {
             text-align: center;
             color: #004d99;
@@ -31,6 +40,7 @@
             color: #666;
             margin-bottom: 30px;
         }
+
         /* ACCORDION HEADER STYLING (FUNNEL STEPS) */
         .accordion-header {
             padding: 18px;
@@ -62,6 +72,7 @@
         .accordion-header.active .arrow {
             transform: rotate(180deg);
         }
+
         /* ACCORDION CONTENT STYLING */
         .accordion-content {
             padding: 20px 25px;
@@ -71,6 +82,7 @@
             background-color: #fff;
             display: none;
         }
+
         /* AI PRODUCT LEVEL STYLING (MATCH CLAUDE INDRE BOKSE) */
         .ai-product-level {
             border: 1px solid #ddd;
@@ -78,7 +90,7 @@
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 6px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Lidt dybere skygge */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
             position: relative;
         }
         .ai-product-level h3 {
@@ -93,7 +105,6 @@
         .ai-product-level .icon {
             font-size: 1.5em;
             margin-right: 10px;
-            color: #007bff; /* Standard ikonfarve, kan overrides */
         }
         .ai-product-level .icon-purple { color: #9c27b0; }
         .ai-product-level .icon-blue { color: #2196f3; }
@@ -136,8 +147,14 @@
             font-size: 1.2em;
             margin-right: 8px;
         }
+        /* EKSTRA BOKS STYLING */
+        .ai-product-level.extra-box {
+            background-color: #f0f0f0;
+            border: 1px dashed #bbb;
+        }
 
-        /* BUSINESS IMPACT STYLING (Mangler i din kode) */
+
+        /* BUSINESS IMPACT STYLING */
         .business-impact-section {
             margin-top: 40px;
             padding: 30px 0;
@@ -145,7 +162,7 @@
         .impact-title {
             font-size: 1.4em;
             font-weight: bold;
-            color: #f44336; /* Rød for impact */
+            color: #f44336; 
             display: flex;
             align-items: center;
             margin-bottom: 20px;
@@ -166,9 +183,9 @@
             font-size: 1.5em;
             font-weight: bold;
         }
-        .top-funnel { color: #9c27b0; background-color: #f3e5f5; }
-        .conversion-rate { color: #4caf50; background-color: #e8f5e9; }
-        .customer-ltv { color: #ff5722; background-color: #fbe9e7; }
+        .impact-box.top-funnel { background-color: #f3e5f5; }
+        .impact-box.conversion-rate { background-color: #e8f5e9; }
+        .impact-box.customer-ltv { background-color: #fbe9e7; }
         .impact-box.top-funnel .value { color: #9c27b0; }
         .impact-box.conversion-rate .value { color: #4caf50; }
         .impact-box.customer-ltv .value { color: #ff5722; }
@@ -202,7 +219,9 @@
 
 <div class="container">
 
-    <p style="text-align: center; color: #004d99; font-weight: bold; margin-bottom: 10px;">DANSK STANDARD</p>
+    <div class="logo-container">
+        <img src="ds_logo.png" alt="Dansk Standard Logo" class="ds-logo">
+    </div>
     <h1>AI-Drevet Sales Funnel</h1>
     <p class="subtitle">Fra awareness til lifetime partnership - hele customer journey drevet af AI</p>
 
@@ -337,9 +356,9 @@
             <div class="maalgruppe"><span class="chart-icon">&#128200;</span> Konvertering til Niveau 4: 35%</div>
         </div>
 
-        <div class="ai-product-level" style="background-color: #f0f0f0;">
+        <div class="ai-product-level extra-box">
             <h3><span class="icon icon-blue">&#129302;</span> Hvordan AI'en beregner scoren (Dit Pitch-Svar)</h3>
-            <p>AI-scoren sammenligner kundens svar på 8-12 spørgsmål mod Dansk Standards **strukturerede vidensarkitektur**. Dette er ikke gætteri – det er baseret på:</p>
+            <p>AI-scoren sammenligner kundens svar på 8-12 spørgsmål mod Dansk Standards <strong>strukturerede vidensarkitektur</strong>. Dette er ikke gætteri – det er baseret på:</p>
             <div class="eksempler">
                 <ul>
                     <li><strong>Vægtning:</strong> Hvert krav fra standarden vægtes efter risiko og branche.</li>
@@ -394,7 +413,7 @@
 
     <div class="business-impact-section">
         <div class="impact-title">
-            <span class="icon-red" style="font-size: 1.6em; margin-right: 10px;">&#128337;</span> Business Impact
+            <span style="font-size: 1.6em; margin-right: 10px; color: #f44336;">&#128337;</span> Business Impact
         </div>
 
         <div class="impact-box top-funnel">
