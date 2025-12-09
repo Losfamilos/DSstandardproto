@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dansk Standard: Strategi & Produktportefølje</title>
+    <title>AI-Drevet Salgsfunnel & Produktstrategi for Dansk Standard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* Grundlæggende styling for en professionel og mobilvenlig præsentation */
+        /* CSS for at skabe den farvede funnel-struktur med fold-ud (accordion) */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -17,40 +17,92 @@
             margin: 40px auto;
             background-color: white;
             padding: 30px;
-            border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         h1 {
             text-align: center;
-            color: #004d99; /* DS-lignende blå tone */
+            color: #004d99;
             font-size: 2.2em;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
-        h2 {
-            color: #007bff;
-            border-bottom: 2px solid #e0e0e0;
-            padding-bottom: 5px;
-            margin-top: 30px;
-        }
-        h3 {
-            color: #333;
-            margin-top: 25px;
-            font-size: 1.1em;
-        }
-        p {
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        ul {
-            margin-bottom: 15px;
-        }
-        .step-link {
-            display: block;
+        .subtitle {
             text-align: center;
-            margin: 25px 0;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 30px;
         }
-        .step-link a {
-            background-color: #28a745; /* Grøn knap */
+        /* Styling for Accordion Headers (Funnel Steps) */
+        .accordion-header {
+            padding: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            color: white;
+            font-size: 1.3em;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        /* Farver matcher din funnel */
+        .step-awareness { background-color: #9c27b0; }
+        .step-interest { background-color: #2196f3; }
+        .step-consideration { background-color: #4caf50; }
+        .step-evaluation { background-color: #ff9800; }
+        .step-purchase { background-color: #ff5722; }
+        .step-loyalty { background-color: #f44336; }
+
+        /* Pil ikon */
+        .arrow {
+            font-size: 1.5em;
+            transform: rotate(0deg);
+            transition: transform 0.3s;
+        }
+        .accordion-header.active .arrow {
+            transform: rotate(180deg);
+        }
+        /* Accordion Content */
+        .accordion-content {
+            padding: 20px 25px;
+            border: 1px solid #ddd;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+            background-color: #fff;
+            display: none; /* Starter lukket */
+        }
+        .accordion-content h3 {
+            color: #007bff;
+            margin-top: 10px;
+            border-bottom: 1px dotted #ccc;
+            padding-bottom: 5px;
+        }
+        .accordion-content ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .accordion-content li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .accordion-content .goal {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        /* Styling for Prototype Link */
+        .prototype-link-section {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #ddd;
+        }
+        .prototype-link-section a {
+            background-color: #28a745; 
             color: white;
             padding: 15px 30px;
             text-decoration: none;
@@ -61,14 +113,8 @@
             transition: background-color 0.3s;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        .step-link a:hover {
+        .prototype-link-section a:hover {
             background-color: #1e7e34;
-        }
-        hr {
-            border: 0;
-            height: 1px;
-            background: #ddd;
-            margin: 30px 0;
         }
     </style>
 </head>
@@ -76,50 +122,125 @@
 
 <div class="container">
 
-    <h1>Markedsudvikling & AI-drevet Produktstrategi</h1>
-    <p style="text-align: center; font-style: italic; color: #666;">
-        En demonstration af et nyt strategisk og kommercielt fundament for Fonden Dansk Standard.
-    </p>
+    <h1>AI-Drevet Sales Funnel for Dansk Standard</h1>
+    <p class="subtitle">Fra awareness til lifetime partnership - hele customer journey drevet af AI</p>
 
-    <hr>
+    <div class="accordion-header step-awareness" data-target="content-awareness">
+        AWARENESS - Skab Opmærksomhed (Loop folk ind i funnel)
+        <span class="arrow">▼</span>
+    </div>
+    <div class="accordion-content" id="content-awareness">
+        <h3>AI Content Generator</h3>
+        <p>Automatisk generering af LinkedIn/blog posts baseret på nye standarder, regulering og branched trends.</p>
+        <ul>
+            <li>EKSEMPLER: NIS2 direktivet: 90 dage til compliance - Er I klar?</li>
+            <li>EKSEMPLER: Fødevareproducenter: Sådan undgår I de 3 største ISO 22000 fejl.</li>
+        </ul>
+        <div class="goal">Mål: 1000+ kvalificerede klik/måned</div>
 
-    <h2>1. Den Strategiske Udfordring</h2>
-    
-    <p>
-        **Dansk Standards største kommercielle udfordring** er at skabe skalerbare indtægtsstrømme, der går ud over salg af PDF-dokumenter. 
-        Vi skal positionere DS som en førende, datadrevet videnplatform, der hjælper danske virksomheder med at implementere og overholde komplekse standarder (f.eks. NIS2, ISO 27001).
-    </p>
+        <h3>Predictive Outreach Engine</h3>
+        <p>AI identificerer virksomheder i risiko og prioriterer leads til salgs teamet.</p>
+        <ul>
+            <li>EKSEMPLER: Analyse af 5000 virksomheder - 200 high priority leads.</li>
+            <li>EKSEMPLER: Personaliserede outreach beskeder per branche.</li>
+        </ul>
+        <div class="goal">Mål: 3x flere kvalificerede møder</div>
+    </div>
 
-    <h3>Nøglefokusområder for Vækst:</h3>
-    <ul>
-        <li>Omdannelse af viden (standarder) til abonnementsbaserede, digitale AI-produkter.</li>
-        <li>Skabelse af en datadrevet lead-pipeline for kurser og konsulentydelser.</li>
-        <li>Forbedring af kundeoplevelsen ved at reducere kompleksiteten ved at finde og anvende standarder.</li>
-    </ul>
+    <div class="accordion-header step-interest" data-target="content-interest">
+        INTEREST - Fang Interesse (Kvalificer leads og reducer friktion)
+        <span class="arrow">▼</span>
+    </div>
+    <div class="accordion-content" id="content-interest">
+        <h3>AI Lead Qualification Bot</h3>
+        <p>Chatbot på ds.dk der kvalificerer behov og router til relevant startpunkt.</p>
+        <ul>
+            <li>EKSEMPLER: Hvad er din primære udfordring? Compliance / Kvalitet / Cyber.</li>
+            <li>Mål: Samler email data før Niveau 0 content.</li>
+        </ul>
+        <div class="goal">Mål: 40% konvertering fra visitor til qualified lead</div>
 
-    <h3>Strategisk Løsning: AI Product Staircase™</h3>
-    <p>
-        Løsningen er at opbygge et produktkatalog i 5 niveauer, hvor hvert niveau trækker kunden op mod den næste, mere værdifulde service. Dette sikrer både volumen i standardsalget og høje marginer på konsulentydelser.
-    </p>
-    
-    <hr>
+        <h3>Smart Email Nurture</h3>
+        <p>AI drevet segmentering og personalisering baseret på branche / adfærd.</p>
+        <ul>
+            <li>EKSEMPLER: Krydssalg på nye standarder.</li>
+            <li>EKSEMPLER: Gradueret værditilførsel til nyhedsbrev subscribers.</li>
+        </ul>
+        <div class="goal">Mål: 25% open rate, 8% click-through</div>
+    </div>
 
-    <h2>2. Interaktiv Produkt Prototype (Niveau 0 til 5)</h2>
-    <p>
-        Klik på knappen herunder for at se, hvordan den strategiske vision er omsat til en interaktiv AI-drevet produktportefølje.
-    </p>
+    <div class="accordion-header step-consideration" data-target="content-consideration">
+        CONSIDERATION - Byg Tillid (Gør standarder tilgængelige og relevante)
+        <span class="arrow">▼</span>
+    </div>
+    <div class="accordion-content" id="content-consideration">
+        <p>Denne fase involverer de første produktniveauer, som skaber tillid og relevans:</p>
+        <p><strong>Niveau 0: AI Standard Selector™:</strong> AI drevet filtrering fra 161.000 til 5-10 relevante standarder (Reducer navigation-kompleksitet med 93%).</p>
+        <p><strong>Niveau 1: Core – Digitalt Køb:</strong> Direkte digital adgang til relevante standarder (Laveste barriere for first purchase).</p>
+    </div>
 
-    <div class="step-link">
+    <div class="accordion-header step-evaluation" data-target="content-evaluation">
+        EVALUATION - Skab Værdi (Diagnosticer behov og vis ROI)
+        <span class="arrow">▼</span>
+    </div>
+    <div class="accordion-content" id="content-evaluation">
+        <p>Denne fase leverer reel værdi, som diagnosticerer kundens problem:</p>
+        <p><strong>Niveau 2: AI Standard Navigator™:</strong> AI assisteret anbefaling af relevante afsnit - krydssalg (20% krydssalg til kurser/konsulentydelser).</p>
+        <p><strong>Niveau 3: AI Compliance Maturity Score™:</strong> Digital diagnose via 8-12 spørgsmål - Målbar score (Konvertering til Niveau 4: 35%).</p>
+    </div>
+
+    <div class="accordion-header step-purchase" data-target="content-purchase">
+        PURCHASE - Luk Salget (Konverter til betalende kunde)
+        <span class="arrow">▼</span>
+    </div>
+    <div class="accordion-content" id="content-purchase">
+        <p><strong>Niveau 4: AI Implementation Roadmap™:</strong> 60-90 dages konkret plan baseret på Maturity Score, der fører til det første premium-produkt køb.</p>
+    </div>
+
+    <div class="accordion-header step-loyalty" data-target="content-loyalty">
+        LOYALTY - Skab Partnerskab (Maksimer lifetime value)
+        <span class="arrow">▼</span>
+    </div>
+    <div class="accordion-content" id="content-loyalty">
+        <p><strong>Niveau 5: Full Service Suite:</strong> Alt inklusiv pakke med hands-on support (Årlig recurring revenue per kunde).</p>
+    </div>
+
+    <div class="prototype-link-section">
+        <h2>Se den Interaktive Prototype</h2>
+        <p>Klik på knappen herunder for at åbne den interaktive demonstration af AI Produkt Niveauerne (0 til 5).</p>
         <a href="prototype.html">
             Åbn AI Produkt Prototype
         </a>
     </div>
 
-    <p style="text-align: center; margin-top: 50px; font-size: 0.9em; color: #999;">
-        Alle elementer er optimeret til mobilvisning.
-    </p>
-
 </div>
+
+<script>
+    // JavaScript for at håndtere fold-ud funktionaliteten (Accordion)
+    document.querySelectorAll('.accordion-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const targetId = header.getAttribute('data-target');
+            const content = document.getElementById(targetId);
+            
+            // Luk alle andre sektioner
+            document.querySelectorAll('.accordion-content').forEach(c => {
+                if (c.id !== targetId && c.style.display === 'block') {
+                    c.style.display = 'none';
+                    document.querySelector(`[data-target="${c.id}"]`).classList.remove('active');
+                }
+            });
+
+            // Toggle den valgte sektion
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                header.classList.remove('active');
+            } else {
+                content.style.display = 'block';
+                header.classList.add('active');
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
