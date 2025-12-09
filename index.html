@@ -56,6 +56,13 @@
             justify-content: space-between;
             align-items: center;
             transition: background-color 0.3s;
+            position: relative; /* For subheader styling */
+        }
+        .accordion-header .sub-header {
+            font-weight: normal;
+            font-size: 0.7em;
+            opacity: 0.9;
+            margin-top: 2px;
         }
         /* FUNNEL FARVER */
         .step-awareness { background-color: #9c27b0; } 
@@ -119,23 +126,24 @@
             margin-top: 5px;
             color: #555;
         }
-        .ai-product-level strong {
-            font-weight: bold;
-        }
-        .ai-product-level .eksempler {
+        /* NY STYLING FOR EKSEMPEL BOKSEN (MINDRE SKRIFT, LYS BAGGRUND) */
+        .ai-product-level .eksempler-box {
             margin-top: 15px;
-            padding-top: 0;
-            font-size: 0.9em;
+            padding: 15px;
+            background-color: #f8f8ff; /* Meget lys farve for elegant effekt */
+            border-radius: 4px;
+            border-left: 3px solid #ddd; /* Lille visuel skillelinje */
+            font-size: 0.85em; /* Mindre skrift, som ønsket */
             color: #666;
         }
-        .ai-product-level .eksempler ul {
+        .ai-product-level .eksempler-box ul {
             list-style-type: none; 
             padding-left: 0;
             margin-top: 5px;
             font-size: 1em; 
             color: #555;
         }
-        .ai-product-level .eksempler ul li:before {
+        .ai-product-level .eksempler-box ul li:before {
             content: "•"; 
             color: #999;
             display: inline-block;
@@ -226,33 +234,6 @@
         .prototype-link-section a:hover {
             background-color: #1e7e34;
         }
-        /* Styling til den strategiske ramme sektion */
-        .strategic-frame {
-            margin-top: 30px;
-            padding: 10px 0;
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #333;
-        }
-        .strategic-frame p {
-            font-weight: normal;
-            font-style: italic;
-            color: #666;
-            font-size: 0.9em;
-            margin-bottom: 20px;
-        }
-        .document-placeholder {
-            width: 100%;
-            height: 300px; 
-            background-color: #e9ecef; 
-            border: 1px solid #ced4da;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 3em;
-            color: #adb5bd;
-            margin-bottom: 30px;
-        }
     </style>
 </head>
 <body>
@@ -265,22 +246,18 @@
     <h1>AI-Drevet Sales Funnel</h1>
     <p class="subtitle">Fra awareness til lifetime partnership - hele customer journey drevet af AI</p>
 
-    <div class="strategic-frame">
-        1. Kommerciel Strategisk Ramme
-        <p>Den overordnede strategi og markedsanalyse er defineret i dokumentet herunder, som danner grundlag for den interaktive prototype.</p>
-        <div class="document-placeholder">
-            <span style="font-size: 0.5em; color: #555;">Dokument Placeholder</span>
-        </div>
-    </div>
     <div class="accordion-header step-awareness" data-target="content-awareness">
-        AWARENESS - Skab Opmærksomhed
+        <span style="display: flex; flex-direction: column; align-items: flex-start;">
+            AWARENESS - Skab Opmærksomhed
+            <span class="sub-header">Loop folk ind i funnel</span>
+        </span>
         <span class="arrow">▼</span>
     </div>
     <div class="accordion-content" id="content-awareness">
         <div class="ai-product-level">
             <h3><span class="icon icon-purple">&#9729;</span> AI Content Generator</h3>
             <p>Automatisk generering af LinkedIn/blog posts baseret på nye standarder, regulering og branched trends</p>
-            <div class="eksempler">EKSEMPLER:
+            <div class="eksempler-box">EKSEMPLER:
                 <ul>
                     <li>NIS2-direktivet: 90 dage til compliance - Er I klar?</li>
                     <li>Ny ISO 27001:2025 - 5 kritiske ændringer for IT-virksomheder</li>
@@ -293,7 +270,7 @@
         <div class="ai-product-level">
             <h3><span class="icon icon-purple">&#128276;</span> Predictive Outreach Engine</h3>
             <p>AI identificerer virksomheder i risiko og prioriterer leads til salgs-teamet</p>
-            <div class="eksempler">EKSEMPLER:
+            <div class="eksempler-box">EKSEMPLER:
                 <ul>
                     <li>Analyse af 5000 virksomheder → 200 high-priority leads</li>
                     <li>Personaliserede outreach-beskeder per branche</li>
@@ -305,14 +282,19 @@
     </div>
 
     <div class="accordion-header step-interest" data-target="content-interest">
-        INTEREST - Fang Interesse
+        <span style="display: flex; flex-direction: column; align-items: flex-start;">
+            INTEREST - Fang Interesse
+            <span class="sub-header">Kvalificer leads og reducer friktion</span>
+        </span>
         <span class="arrow">▼</span>
     </div>
     <div class="accordion-content" id="content-interest">
+        <p>Denne fase involverer de første produktniveauer, som skaber tillid og relevans:</p>
+
         <div class="ai-product-level">
             <h3><span class="icon icon-blue">&#9989;</span> AI Lead Qualification Bot</h3>
             <p>Chatbot på ds.dk der kvalificerer behov og router til relevant startpunkt</p>
-            <div class="eksempler">EKSEMPLER:
+            <div class="eksempler-box">EKSEMPLER:
                 <ul>
                     <li>Hvad er din primære udfordring? → Compliance / Kvalitet / Cyber</li>
                     <li>Hvilken branche? → Router til relevant Niveau 0 content</li>
@@ -325,7 +307,7 @@
         <div class="ai-product-level">
             <h3><span class="icon icon-blue">&#128233;</span> Smart Email Nurture</h3>
             <p>AI-drevet segmentering og personalisering baseret på branche + adfærd</p>
-            <div class="eksempler">EKSEMPLER:
+            <div class="eksempler-box">EKSEMPLER:
                 <ul>
                     <li>Tidligere køber → Krydssalg på nye standards</li>
                     <li>Lead fra webinar → Opfølgning med relevant case</li>
@@ -337,7 +319,10 @@
     </div>
 
     <div class="accordion-header step-consideration" data-target="content-consideration">
-        CONSIDERATION - Byg Tillid
+        <span style="display: flex; flex-direction: column; align-items: flex-start;">
+            CONSIDERATION - Byg Tillid
+            <span class="sub-header">Gør standarder tilgængelige og relevante</span>
+        </span>
         <span class="arrow">▼</span>
     </div>
     <div class="accordion-content" id="content-consideration">
@@ -346,7 +331,7 @@
         <div class="ai-product-level">
             <h3><span class="icon icon-green">&#9728;</span> Niveau 0: AI Standard Selector™</h3>
             <p>AI-drevet filtrering fra 161.000 til 5-10 relevante standarder</p>
-            <div class="eksempler">EKSEMPLER:
+            <div class="eksempler-box">EKSEMPLER:
                 <ul>
                     <li>Input: Branchekode + Segment</li>
                     <li>Output: Kurateret liste med rationale</li>
@@ -359,7 +344,7 @@
         <div class="ai-product-level">
             <h3><span class="icon icon-green">&#128190;</span> Niveau 1: Core – Digitalt Køb</h3>
             <p>Direkte digital adgang til relevante standarder</p>
-            <div class="eksempler">EKSEMPLER:
+            <div class="eksempler-box">EKSEMPLER:
                 <ul>
                     <li>ISO 27001, ISO 27002, NIS2</li>
                     <li>Søgbar database</li>
@@ -371,7 +356,10 @@
     </div>
 
     <div class="accordion-header step-evaluation" data-target="content-evaluation">
-        EVALUATION - Skab Værdi
+        <span style="display: flex; flex-direction: column; align-items: flex-start;">
+            EVALUATION - Skab Værdi
+            <span class="sub-header">Diagnosticer behov og vis ROI</span>
+        </span>
         <span class="arrow">▼</span>
     </div>
     <div class="accordion-content" id="content-evaluation">
@@ -380,7 +368,7 @@
         <div class="ai-product-level">
             <h3><span class="icon icon-orange">&#9432;</span> Niveau 2: AI Standard Navigator™</h3>
             <p>AI-assisteret anbefaling af relevante afsnit + krydssalg</p>
-            <div class="eksempler">EKSEMPLER:
+            <div class="eksempler-box">EKSEMPLER:
                 <ul>
                     <li>Start med ISO 27001 afsnit 6.1.2</li>
                     <li>Relaterede kurser: Intro til Cybersikkerhed</li>
@@ -393,7 +381,7 @@
         <div class="ai-product-level">
             <h3><span class="icon icon-orange">&#128200;</span> Niveau 3: AI Compliance Maturity Score™</h3>
             <p>Digital diagnose via 8-12 spørgsmål → Målbar score</p>
-            <div class="eksempler">EKSEMPLER:
+            <div class="eksempler-box">EKSEMPLER:
                 <ul>
                     <li>Input: Quick questionnaire</li>
                     <li>Output: Score 0-100 + gap-analyse</li>
@@ -406,7 +394,7 @@
         <div class="ai-product-level extra-box">
             <h3><span class="icon icon-blue">&#129302;</span> Hvordan AI'en beregner scoren (Dit Pitch-Svar)</h3>
             <p>AI-scoren sammenligner kundens svar på 8-12 spørgsmål mod Dansk Standards <strong>strukturerede vidensarkitektur</strong>. Dette er ikke gætteri – det er baseret på:</p>
-            <div class="eksempler">
+            <div class="eksempler-box">
                 <ul>
                     <li><strong>Vægtning:</strong> Hvert krav fra standarden vægtes efter risiko og branche.</li>
                     <li><strong>Audit-Data:</strong> Data fra tusindvis af tidligere *audits* og *konsulentrapporter* træner AI'en i at identificere kritiske huller.</li>
@@ -417,7 +405,10 @@
     </div>
 
     <div class="accordion-header step-purchase" data-target="content-purchase">
-        PURCHASE - Luk Salget
+        <span style="display: flex; flex-direction: column; align-items: flex-start;">
+            PURCHASE - Luk Salget
+            <span class="sub-header">Konverter til betalende kunde</span>
+        </span>
         <span class="arrow">▼</span>
     </div>
     <div class="accordion-content" id="content-purchase">
@@ -426,7 +417,7 @@
         <div class="ai-product-level">
             <h3><span class="icon icon-orange">&#128214;</span> Niveau 4: AI Implementation Roadmap™</h3>
             <p>60-90 dages konkret plan baseret på Maturity Score</p>
-            <div class="eksempler">EKSEMPLER:
+            <div class="eksempler-box">EKSEMPLER:
                 <ul>
                     <li>Uge 1-3: Governance templates</li>
                     <li>Uge 4-6: KPI-tracking setup</li>
@@ -438,7 +429,10 @@
     </div>
 
     <div class="accordion-header step-loyalty" data-target="content-loyalty">
-        LOYALTY - Skab Partnerskab
+        <span style="display: flex; flex-direction: column; align-items: flex-start;">
+            LOYALTY - Skab Partnerskab
+            <span class="sub-header">Maksimer lifetime value</span>
+        </span>
         <span class="arrow">▼</span>
     </div>
     <div class="accordion-content" id="content-loyalty">
@@ -447,7 +441,7 @@
         <div class="ai-product-level">
             <h3><span class="icon icon-red">&#128081;</span> Niveau 5: Full Service Suite</h3>
             <p>Alt-inklusiv pakke med hands-on support</p>
-            <div class="eksempler">EKSEMPLER:
+            <div class="eksempler-box">EKSEMPLER:
                 <ul>
                     <li>Dedikeret DS-eksperter</li>
                     <li>Onsite audit-forberedelse</li>
