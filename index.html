@@ -1,50 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dansk Standard: Strategi & Prototype</title>
+    <title>Dansk Standard: Strategi & Produktportefølje</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        /* Grundlæggende styling for en professionel og mobilvenlig præsentation */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             background-color: #f4f4f4;
             color: #333;
         }
         .container {
-            max-width: 1000px;
-            margin: 0 auto;
+            max-width: 900px;
+            margin: 40px auto;
             background-color: white;
             padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         h1 {
             text-align: center;
+            color: #004d99; /* DS-lignende blå tone */
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+        h2 {
             color: #007bff;
-            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 5px;
+            margin-top: 30px;
         }
-        .section-title {
-            font-size: 1.5em;
-            color: #333;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 10px;
-            margin-top: 40px;
-            margin-bottom: 20px;
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
         }
-        .iframe-container {
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            overflow: hidden;
-            margin-bottom: 20px;
-        }
-        .prototype-link {
+        .step-link {
             display: block;
             text-align: center;
-            margin: 40px 0;
+            margin: 25px 0;
         }
-        .prototype-link a {
-            background-color: #28a745;
+        .step-link a {
+            background-color: #28a745; /* Grøn knap */
             color: white;
             padding: 15px 30px;
             text-decoration: none;
@@ -53,30 +51,65 @@
             font-weight: bold;
             display: inline-block;
             transition: background-color 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        .prototype-link a:hover {
+        .step-link a:hover {
             background-color: #1e7e34;
+        }
+        .strategy-link a {
+            background-color: #007bff; /* Blå knap */
+        }
+        .strategy-link a:hover {
+            background-color: #0056b3;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 30px 0;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Strategi for Markedsudvikling & AI-vækst</h1>
 
-        <div class="section-title">1. Kommerciel Strategisk Ramme</div>
-        
-        <p>Den overordnede strategi og markedsanalyse er defineret i dokumentet herunder, som danner grundlag for den interaktive prototype.</p>
+<div class="container">
 
-        <div class="iframe-container">
-            <iframe src="https://claude.site/public/artifacts/5a322596-57b8-4670-9f4e-ef1d815b13ea/embed" title="Claude Artifact" width="100%" height="600" frameborder="0" allow="clipboard-write" allowfullscreen></iframe>
-        </div>
-        <div class="section-title">2. Interaktiv Produkt Prototype (Niveau 0 til 5)</div>
+    <h1>Markedsudvikling & AI-drevet Produktstrategi</h1>
+    <p style="text-align: center; font-style: italic; color: #666;">
+        Demonstration af en skalerbar portefølje til Fonden Dansk Standard.
+    </p>
 
-        <p>Klik på knappen herunder for at se, hvordan strategien er omsat til en skalerbar AI-drevet produktportefølje (den interaktive demo).</p>
+    <hr>
 
-        <div class="prototype-link">
-            <a href="prototype.html">Åbn AI Produkt Prototype</a>
-        </div>
+    <h2>1. Kommerciel Strategisk Ramme</h2>
+    <p>
+        For at forstå potentialet i den interaktive prototype, er det essentielt at starte med den strategiske vision:
+    </p>
+
+    <div class="step-link strategy-link">
+        <a href="strategy.html">
+            Læs Strategien (Nøgleudfordringer & Vækstmotorer)
+        </a>
     </div>
+    
+    <hr>
+
+    <h2>2. Interaktiv Produkt Prototype</h2>
+    <p>
+        Nedenstående link fører til den interaktive demo, der viser, hvordan strategien er omsat til en AI-drevet 5-niveaus produktportefølje.
+    </p>
+
+    <div class="step-link">
+        <a href="prototype.html">
+            Åbn AI Produkt Prototype (Niveau 0 til 5)
+        </a>
+    </div>
+
+    <p style="text-align: center; margin-top: 50px; font-size: 0.9em; color: #999;">
+        Alle elementer er optimeret til mobilvisning.
+    </p>
+
+</div>
+
 </body>
 </html>
